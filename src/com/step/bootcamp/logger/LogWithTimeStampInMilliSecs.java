@@ -1,7 +1,7 @@
 package com.step.bootcamp.logger;
 
 import java.util.Calendar;
-
+//todo decorative pattern
 class LogWithTimeStampInMilliSecs extends Log {
 
     private String timeStamp;
