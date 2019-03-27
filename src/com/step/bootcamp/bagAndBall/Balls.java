@@ -3,18 +3,18 @@ package com.step.bootcamp.bagAndBall;
 import java.util.HashMap;
 
 class Balls {
-    HashMap<Ball, Integer> balls;
+    HashMap<Colour, Integer> balls;
 
     Balls() {
         this.balls = new HashMap<>();
     }
 
     void add(Ball ball) {
-        if (!this.balls.containsKey(ball)) {
-            balls.put(ball, 1);
+        if (!this.balls.containsKey(ball.getColour())) {
+            balls.put(ball.getColour(), 1);
         }
-        int noOfBalls = balls.get(ball);
-        balls.put(ball, noOfBalls + 1);
+        int noOfBalls = balls.get(ball.getColour());
+        balls.put(ball.getColour(), noOfBalls + 1);
     }
 
 

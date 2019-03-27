@@ -8,7 +8,6 @@ public class Validations {
     public Validations() {
         this.allValidations = new HashMap<>();
         allValidations.put("Green", new GreenBallValidator());
-        allValidations.put("Blue", new BlueBallValidator());
         allValidations.put("Red", new RedBallValidator());
         allValidations.put("Yellow", new YellowBallValidator());
     }

@@ -1,5 +1,5 @@
 package com.step.bootcamp.bagAndBall;
 
 public interface Validator {
-    boolean isAddable();
+    boolean isAddable(Ball thisBall, Balls ballDetails) throws TooManyBallsException, TooManyGreenBallsException;
 }

@@ -1,18 +1,34 @@
 package com.step.bootcamp.bagAndBall;
 
 class Ball {
-    private String colour;
+    private Colour colour;
 
-    Ball(String colour) {
+    private Ball(Colour colour) {
         this.colour = colour;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Ball ball = (Ball) o;
-        return colour.equals(ball.colour);
+    static Ball yellowBall() {
+        return new Ball(Colour.YELLOW);
+    }
+
+    static Ball blueBall() {
+        return new Ball(Colour.BLUE);
+    }
+
+    boolean isOfColor(Colour other) {
+        return colour.equals(other);
+    }
+
+    Colour getColour() {
+        return colour;
+    }
+
+    static Ball greenBall() {
+        return new Ball(Colour.GREEN);
+    }
+
+    static Ball redBall() {
+        return new Ball(Colour.RED);
     }
 
 }

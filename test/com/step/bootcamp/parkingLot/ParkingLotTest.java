@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ParkingLotTest {
     @Test
-    void shouldParkTheVehicle() throws ParkingLotException {
+    void shouldParkTheVehicle() {
         Attendant attendant = new Attendant();
         ParkingLot parkingLot = new ParkingLot(20, attendant);
         assertDoesNotThrow(() -> parkingLot.park(new Vehicle("Car")));
