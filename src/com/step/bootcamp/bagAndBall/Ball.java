@@ -1,5 +1,7 @@
 package com.step.bootcamp.bagAndBall;
 
+import java.util.Objects;
+
 class Ball {
     private Colour colour;
 
@@ -31,6 +33,18 @@ class Ball {
         return new Ball(Colour.RED);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ball ball = (Ball) o;
+        return colour == ball.colour;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(colour);
+    }
 }
 
 

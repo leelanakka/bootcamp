@@ -5,7 +5,9 @@ public class RedBallValidator implements Validator {
     public boolean isAddable(Ball thisBall, Balls ballDetails) throws TooManyRedBallsException {
         if (thisBall.isOfColor(Colour.RED)) {
             Integer noOfGreenBalls = ballDetails.balls.get(Colour.GREEN);
-            if (ballDetails.balls.get(Colour.RED) > 2 * noOfGreenBalls) {
+            System.out.println(noOfGreenBalls+"=============");
+            System.out.println(ballDetails.balls.getOrDefault(Colour.RED, 0));
+            if (ballDetails.balls.getOrDefault(Colour.RED, 0) > 2 * noOfGreenBalls) {
                 throw new TooManyRedBallsException();
             }
         }

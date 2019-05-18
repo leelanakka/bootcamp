@@ -26,6 +26,6 @@ class Bag {
     }
 
     private boolean isAddable() {
-        return this.ballDetails.balls.size() <= 11;
+        return this.ballDetails.totalNumberOfBalls() <= 11;
     }
 }

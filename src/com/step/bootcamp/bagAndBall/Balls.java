@@ -4,9 +4,11 @@ import java.util.HashMap;
 
 class Balls {
     HashMap<Colour, Integer> balls;
+    private int totalBalls;
 
     Balls() {
         this.balls = new HashMap<>();
+        this.totalBalls = 0;
     }
 
     void add(Ball ball) {
@@ -15,8 +17,12 @@ class Balls {
         }
         int noOfBalls = balls.get(ball.getColour());
         balls.put(ball.getColour(), noOfBalls + 1);
+        totalBalls++;
     }
 
+    int totalNumberOfBalls() {
+        return this.totalBalls;
+    }
 
 }
 
